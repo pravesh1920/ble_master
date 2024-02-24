@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WRTagActivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tbBar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/royalblue"
+        android:textSize="@dimen/title_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:leftBackground="?attr/selectableItemBackground"
+        app:leftIcon="@mipmap/ic_back"
+        app:rightBackground="?attr/selectableItemBackground"
+        app:title="@string/app_text_read_write_tag"
+        app:titleColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/rw_tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbBar">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_write_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_text_read_tag"
+                android:textSize="@dimen/setting_font_size" />
+
+            <Button
+                android:id="@+id/bt_lock_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="@string/app_text_lock_tag"
+                android:textSize="@dimen/setting_font_size" />
+
+            <Button
+                android:id="@+id/bt_kill_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="@string/app_text_kill_tag"
+                android:textSize="@dimen/setting_font_size" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fra_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1">
+
+            <LinearLayout
+                android:id="@+id/write_tag_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <include layout="@layout/write_tag_layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lock_tag_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <include layout="@layout/lock_tag_layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/kill_tag_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <include layout="@layout/kill_tag_layout" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.troido.hexinput.ui.keyboard.HexKeyboardView
+        android:id="@+id/myHexKeyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

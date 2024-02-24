@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enquiry_layout"
+    android:orientation="vertical"
+    android:layout_margin="2dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:id="@+id/llEnquiryHide"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/edittext_border_z"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/app_text_inquiry_config"
+            android:textSize="@dimen/setting_font_size"
+            android:textColor="@color/royalblue"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"/>
+
+        <ImageButton
+            android:id="@+id/bt_enquiry_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="center"
+            app:srcCompat="@drawable/bt_display_hide" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enquiry_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="-1dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rgEnquiry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/edittext_border"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbEnquiryEpc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/setting_font_size"
+                    android:text="EPC" />
+
+                <RadioButton
+                    android:id="@+id/rbEnquiryTid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/setting_font_size"
+                    android:text="TID" />
+
+                <RadioButton
+                    android:id="@+id/rbEnquiryUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/setting_font_size"
+                    android:text="USER" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/app_text_interval_time"
+                android:textSize="@dimen/setting_font_size" />
+
+            <EditText
+                android:id="@+id/etPollingInterval"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="@dimen/setting_font_size"
+                android:background="@drawable/edittext_border_z" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/app_text_start_address"
+                android:textSize="@dimen/setting_font_size" />
+
+            <EditText
+                android:id="@+id/etAcsAddr"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="@dimen/setting_font_size"
+                android:background="@drawable/edittext_border_z" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/app_text_byte_length"
+                android:textSize="@dimen/setting_font_size" />
+
+            <EditText
+                android:id="@+id/etAcsDataLen"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="@dimen/setting_font_size"
+                android:background="@drawable/edittext_border_z" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/app_text_filter_time"
+                android:textSize="@dimen/setting_font_size" />
+
+            <EditText
+                android:id="@+id/etFilterTime"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:background="@drawable/edittext_border_z"
+                android:textSize="@dimen/setting_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:visibility="invisible" />
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btHomeGet"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:text="@string/app_text_get"
+                android:textSize="@dimen/button_font_size"
+                android:layout_weight="1"
+                app:normalBackgroundColor="@color/royalblue"
+                app:normalStrokeColor="@color/royalblue"
+                app:normalStrokeWidth="2dp"
+                app:normalTextColor="@color/white"
+                app:pressedBackgroundColor="@color/royalblue"
+                app:pressedStrokeColor="@color/royalblue"
+                app:pressedStrokeWidth="2dp"
+                app:pressedTextColor="@color/white"
+                app:statebutton_radius="4dp" />
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btHomeSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:text="@string/app_text_set_up"
+                android:textSize="@dimen/button_font_size"
+                android:layout_weight="1"
+                app:normalBackgroundColor="@color/royalblue"
+                app:normalStrokeColor="@color/royalblue"
+                app:normalStrokeWidth="2dp"
+                app:normalTextColor="@color/white"
+                app:pressedBackgroundColor="@color/royalblue"
+                app:pressedStrokeColor="@color/royalblue"
+                app:pressedStrokeWidth="2dp"
+                app:pressedTextColor="@color/white"
+                app:statebutton_radius="4dp" />
+            <!--            <Button-->
+            <!--                android:id="@+id/btHomeGet"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="5dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:text="获取"-->
+            <!--                android:textSize="@dimen/setting_font_size" />-->
+
+            <!--            <Button-->
+            <!--                android:id="@+id/btHomeSetting"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="5dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:text="设置"-->
+            <!--                android:textSize="@dimen/setting_font_size" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TotalPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lblTotalTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/app_text_total_tag"
+                android:textSize="@dimen/setting_font_size" />
+            <TextView
+                android:id="@+id/txtTotalTag"
+                android:width="100dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="0"
+                android:textSize="32sp" />
+            <TextView
+                android:id="@+id/lblSumCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:text="@string/app_text_sum_count"
+                android:textSize="@dimen/setting_font_size" />
+            <TextView
+                android:id="@+id/txtSumCount"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="0"
+                android:textSize="32sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <CheckBox
+                    android:id="@+id/cbSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/royalblue"
+                    android:text="@string/app_text_no" />
+
+                <TextView
+                    android:id="@+id/tvData"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/royalblue"
+                    android:text="Data" />
+
+                <TextView
+                    android:id="@+id/tvData1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/royalblue"
+                    android:text="@string/app_text_num" />
+
+                <TextView
+                    android:id="@+id/tvData2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/royalblue"
+                    android:text="RSSI" />
+
+                <TextView
+                    android:id="@+id/tvData3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/royalblue"
+                    android:visibility="gone"
+                    android:text="@string/app_text_antenna" />
+
+                <TextView
+                    android:id="@+id/tvData4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/royalblue"
+                    android:text="@string/app_text_channel" />
+            </LinearLayout>
+
+            <!--            <HorizontalScrollView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:scrollbars="none"-->
+            <!--                android:layout_marginTop="4dp"-->
+            <!--                android:layout_marginBottom="4dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@+id/btnStartInventory"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/linearLayout">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnStartInventory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <com.donkingliang.groupedadapter.widget.StickyHeaderLayout
+                    android:id="@+id/sticky_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvQuery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_msg_data2"/>
+                </com.donkingliang.groupedadapter.widget.StickyHeaderLayout>
+            </LinearLayout>
+            <!--            </HorizontalScrollView>-->
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/btnStartInventory"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:padding="2dp"
+                android:text="@string/app_text_start"
+                android:textSize="@dimen/setting_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bt_rw_tag"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:normalBackgroundColor="@color/royalblue"
+                app:normalStrokeColor="@color/royalblue"
+                app:normalStrokeWidth="1dp"
+                app:normalTextColor="@color/white"
+                app:pressedBackgroundColor="@color/royalblue"
+                app:pressedStrokeColor="@color/royalblue"
+                app:pressedStrokeWidth="2dp"
+                app:pressedTextColor="@color/white"
+                app:statebutton_radius="8dp" />
+
+            <com.deadline.statebutton.StateButton
+                android:id="@+id/bt_rw_tag"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:padding="2dp"
+                android:text="@string/app_text_read_write_tag"
+                android:textSize="@dimen/setting_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnStartInventory"
+                app:normalBackgroundColor="@color/gray_cc"
+                app:normalStrokeColor="@color/gray_cc"
+                app:normalStrokeWidth="2dp"
+                app:normalTextColor="@color/white"
+                app:pressedBackgroundColor="@color/royalblue"
+                app:pressedStrokeColor="@color/royalblue"
+                app:pressedStrokeWidth="2dp"
+                app:pressedTextColor="@color/white"
+                app:statebutton_radius="8dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_layout"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_elect_power" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:gravity="center_vertical" >
+
+            <com.monke.mprogressbar.MHorProgressBar
+                android:id="@+id/mhp_2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:paddingHorizontal="5dp"
+                android:visibility="invisible"
+                app:bgbordercolor="#505050"
+                app:bgborderwidth="1dp"
+                app:bgdrawable_type="clamp"
+                app:fontdrawable="@color/lightgreen"
+                app:bgdrawable="@color/white"
+                app:fontdrawable_type="cover"
+                app:durprogress="0"
+                app:radius="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_setting_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/setting_font_size"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/app_text_elect_acquisition"/>
+        </FrameLayout>
+
+        <!-- android:background="@drawable/edittext_border"
+        <TextView
+            android:id="@+id/tv_setting_battery"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="5"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="电量获取中..." />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_hardware_version" />
+
+        <TextView
+            android:id="@+id/tv_setting_hw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:maxLines="1"
+            android:text="@string/app_text_hardware_version_get" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_firmware_version" />
+
+        <TextView
+            android:id="@+id/tv_setting_sw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:maxLines="1"
+            android:text="@string/app_text_firmware_version_get"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_reader_name" />
+
+        <EditText
+            android:id="@+id/et_setting_btName"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textSize="@dimen/setting_font_size"
+            android:maxLines="1"
+            android:background="@drawable/edittext_border"
+            android:text="@string/app_text_reader_name_get" />
+
+        <Button
+            android:id="@+id/btSetBleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_set_up" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_output_mode" />
+
+        <Spinner
+            android:id="@+id/spinnerBleMode"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="3"
+            android:spinnerMode="dropdown"
+            android:entries="@array/blemode"
+            android:background="@drawable/shape_gender_spinner"
+            android:gravity="center"
+            android:textSize="@dimen/setting_font_size" />
+
+        <Button
+            android:id="@+id/bt_setting_setBleMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_set_up" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_frequency_band" />
+
+        <Spinner
+            android:id="@+id/spinner_region"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="3"
+            android:spinnerMode="dropdown"
+            android:entries="@array/frequency"
+            android:background="@drawable/shape_gender_spinner"
+            android:gravity="center"
+            android:textSize="@dimen/setting_font_size" />
+
+        <Button
+            android:id="@+id/bt_setting_getFrequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_get" />
+
+        <Button
+            android:id="@+id/bt_setting_frequencySetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_set_up" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_power" />
+
+        <Spinner
+            android:id="@+id/spinner_rfid_power"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="3"
+            android:spinnerMode="dropdown"
+            android:entries="@array/power"
+            android:background="@drawable/shape_gender_spinner"
+            android:gravity="center"
+            android:textSize="@dimen/setting_font_size"/>
+
+        <Button
+            android:id="@+id/bt_setting_getPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_get" />
+
+        <Button
+            android:id="@+id/bt_setting_powerSetup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setting_font_size"
+            android:text="@string/app_text_set_up" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btInitialization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/setting_font_size"
+        android:text="@string/app_text_Initialization" />
+
+    <Button
+        android:id="@+id/btDisconnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/setting_font_size"
+        android:text="@string/app_text_disconnect_bluetooth" />
+</LinearLayout>
